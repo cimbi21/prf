@@ -1,0 +1,12 @@
+<div class="content" role="main">
+
+  <h2>Hello {{username}}!</h2>
+  <h3>Your email address is: {{email}}</h3>
+  <h3 *ngIf="isAdmin">You are an admin!</h3>
+  <h3 *ngIf="!isAdmin">You are a cute user! Have a nice day!</h3>
+  <button [routerLink]="['/mainPage']" class="btn btn-primary mb-2">Home</button>
+  <button class="btn btn-primary mb-2" [routerLink]="['/login']" >Logout</button>
+  <!-- Footer -->
+  <footer>
+  </footer>
+</div>

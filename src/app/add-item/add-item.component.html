@@ -1,0 +1,32 @@
+<div class="content" role="main" style="text-align: center;">
+
+  <h2>Add a new item</h2>
+  <div class="mb-3" >
+    <label for="name" class="form-label">Name:</label>
+    <br>
+    <input type="text" id="name" [(ngModel)]="name" class="form-control" placeholder="Apple">
+  </div>
+  <div class="mb-3" >
+    <label for="cost" class="form-label">Cost:</label>
+    <br>
+    <input type="number" id="cost" [(ngModel)]="cost" class="form-control">
+  </div>
+  <div class="mb-3" >
+    <label for="amount" class="form-label">Amount:</label>
+    <br>
+    <input type="number" id="amount" [(ngModel)]="amount" class="form-control">
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-primary mb-3" (click)="add()">Add item</button>
+  </div> 
+
+  <div *ngIf="errorMsg!=''" id="error-msg" class="card highlight-card card-small">
+
+    <span>{{errorMsg}}</span>
+
+  </div>
+  <!-- Footer -->
+  <footer>
+  </footer>
+
+</div>

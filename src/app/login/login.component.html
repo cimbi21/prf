@@ -1,0 +1,29 @@
+<div class="content" role="main" style="text-align: center;">
+
+  <h2>Login</h2>
+
+  <div class="mb-3" >
+    <label for="email" class="form-label">Email:</label>
+    <br>
+    <input type="email" id="email" [(ngModel)]="email" class="form-control" placeholder="name@example.com">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password:</label>
+    <br>
+    <input type="password" id="password" [(ngModel)]="password" class="form-control"  placeholder="******">
+  </div>
+  <div class="col-auto">
+    <button class="btn btn-primary mb-3" (click)="login()">Login</button>
+  </div> 
+  <a [routerLink]="['/register']"  class="nav-link active" routerLinkActive="router-link-active">Register here</a>
+
+  <div *ngIf="errorMsg!=''" id="error-msg" class="card highlight-card card-small">
+
+    <span>{{errorMsg}}</span>
+
+  </div>
+  <!-- Footer -->
+  <footer>
+  </footer>
+
+</div>

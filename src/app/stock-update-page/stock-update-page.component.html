@@ -1,0 +1,26 @@
+<div class="content" role="main">
+
+
+
+  <button class="btn btn-primary mb-3" [routerLink]="['/mainPage']">Home</button>
+  <button class="btn btn-primary mb-3" [routerLink]="['/login']">Logout</button>
+  <button class="btn btn-primary mb-3" [routerLink]="['/addItem']">Add a new item</button>
+
+  <h2>List of all the items:</h2>
+
+  <div style="width: 1000px;">
+      <div *ngFor="let item of stock" style="text-align: center; background-color: #03adfc; width:300px; border-radius: 30px; border: 2px black solid; padding: 10px; margin: 15px; float: left">
+        <h4>{{item.name}}</h4>
+        <h4>{{item.cost}} Ft</h4>
+        <h4>{{item.amount}} db</h4>
+        <button class="btn btn-primary mb-3" [routerLink]="['/updateItem', {name: item.name, cost: item.cost, amount: item.amount}]" routerLinkActive="router-link-active" >Update information</button>
+        <br>
+        <button class="btn btn-primary mb-3" (click)="delete(item.name)">Delete</button>
+      </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+  </footer>
+
+</div>

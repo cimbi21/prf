@@ -1,0 +1,42 @@
+<div class="content" role="main"  style="text-align: center; width: 300px;">
+
+  <h2>Register</h2>
+  <div class="mb-3" >
+    <label for="email" class="form-label">Email:</label>
+    <br>
+    <input type="email" id="email" [(ngModel)]="email" class="form-control" placeholder="name@example.com">
+  </div>
+  <div class="mb-3">
+    <label for="username" class="form-label">Username:</label>
+    <br>
+    <input type="text" id="username" [(ngModel)]="username" class="form-control" placeholder="Pali">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password:</label>
+    <br>
+    <input type="password" id="password" [(ngModel)]="password" class="form-control"  placeholder="******">
+  </div>
+  <div class="mb-2">
+  <label for="role" class="form-label">Role:</label>
+  <select [(ngModel)]="role" id="role" aria-label="Default select example" class="form-select" >
+    <option selected value="User">User</option>
+    <option value="Admin">Admin</option>
+  </select>
+  </div>
+  <br>
+  <div class="col-auto">
+    <button class="btn btn-primary mb-3" (click)="register()">Sign up</button>
+  </div> 
+  <a [routerLink]="['/login']"  class="nav-link active" routerLinkActive="router-link-active">Login here</a>
+
+  <div *ngIf="errorMsg!=''" id="error-msg" class="card highlight-card card-small">
+
+    <span>{{errorMsg}}</span>
+
+  </div>
+  <!-- Footer -->
+  <footer>
+  </footer>
+
+
+</div>
